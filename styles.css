@@ -1,0 +1,192 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.color-grey {
+    color: #F5F0EC;
+}
+
+.bg-color-grey {
+    background-color: #F5F0EC;
+}
+
+.color-green {
+    color: #1B5B31;
+}
+
+.border-color-green {
+    border-color: #1B5B31;
+}
+
+.border-bottom-solid-green {
+    border-bottom: 1px solid #1B5B31;
+}
+
+.bg-color-green {
+    background-color: #1B5B31;
+}
+
+.bg-color-beige {
+    background-color: #DCC1AB;
+}
+
+.bg-color-black {
+    background-color: #111111;
+}
+
+.intro-arrow-img:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+
+}
+
+.card-offer:hover {
+    background-color: rgb(232, 232, 232);
+    transform: scale(1.009);
+}
+
+.hidden {
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    background: linear-gradient(to top, #DCC1AB 0%, transparent 100%);
+    z-index: 2;
+    bottom: 1%;
+
+}
+
+.btn-show-more {
+    position: absolute;
+    bottom: 6%;
+    right: 45%;
+    z-index: 3;
+    border-color: #111111;
+}
+
+.gallery {
+    columns: 3 200px;
+    column-gap: 1.5rem;
+    margin: 0 auto;
+}
+
+.gallery-item img {
+    margin: 0.9rem 0;
+    width: 100%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    transition: all .25s ease-in-out;
+}
+
+.expand img:nth-child(1n + 10) {
+    max-height: 0;
+    opacity: 0;
+    transition: 0.2s ease-in;
+}
+
+.item {
+    width: 100%;
+}
+
+
+.thumbnail {
+
+    cursor: pointer;
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.050);
+}
+
+.thumbnail img:focus,
+.thumbnail img:focus {
+    border: solid 5px rgb(78, 76, 226);
+}
+
+.popup {
+    align-content: center;
+    animation: fadeIn 0.3s;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup.fade-out {
+    animation: fadeOut 0.3s both;
+}
+
+.popup__img {
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.popup__close {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    right: 64px;
+    top: 64px;
+}
+
+.popup__arrow {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 70px;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+}
+
+.popup__close,
+.popup__arrow {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.popup__close:hover,
+.popup__arrow:hover {
+    opacity: 1;
+}
+
+.popup__arrow--left {
+    left: 3%;
+}
+
+.popup__arrow--right {
+    right: 3%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
